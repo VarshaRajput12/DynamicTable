@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Table</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="mainContainer">
+      <header>
+        <h1>Dynamic Table</h1>
+      </header>
+      <div class="container">
+        <input id="name1" type="text" placeholder="Enter Your Name..." />
+        <input id="email" type="email" placeholder="Enter Your Email..." />
+        <input id="phone" type="text" placeholder="Enter Number..." />
+        <button id="add">Submit</button>
+      </div>
+
+      <div class="secondContainer">
+        <table>
+          <tr>
+            <th class="Thead">Name</th>
+            <th class="Thead">Email</th>
+            <th class="Thead">Contact Number</th>
+            <th class="small">Action</th>
+          </tr>
+          <tbody id="tablebody"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
