@@ -2,11 +2,18 @@ const tbodyelm = document.getElementById("tablebody");
 const name1 = document.getElementById("name1");
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
-const btn = document.getElementById("add");
+const form = document.querySelector("form");
+const error = document.querySelector(".error");
+const success = document.querySelector(".success");
 
-btn.addEventListener("click", () => {
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
   if (name1.value == "" || email.value == "" || phone.value == "") {
-    alert("Fill The Empty Field");
+    error.innerText = "Empty input field (s)";
+    error.classList.add("error");
+    setTimeout(() => {
+      error.innerText = "";
+    }, 2000);
     return;
   }
   tbodyelm.innerHTML += `<tr>
@@ -20,7 +27,11 @@ btn.addEventListener("click", () => {
   for (let i = 0; i < row.length; i++) {
     row[i].onclick = function () {
       this.parentNode.remove();
-      alert("Are you Sure !!");
+      success.innerText = "Item Deleted Successfully";
+      success.classList.add("success");
+      setTimeout(() => {
+        success.innerText = "";
+      }, 2000);
     };
   }
   name1.value = "";

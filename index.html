@@ -13,10 +13,12 @@
         <h1>Dynamic Table</h1>
       </header>
       <div class="container">
+        <form>
         <input id="name1" type="text" placeholder="Enter Your Name..." />
         <input id="email" type="email" placeholder="Enter Your Email..." />
         <input id="phone" type="text" placeholder="Enter Number..." />
-        <button id="add">Submit</button>
+        <input type="submit" value="Add Row" class="sub" id="add">
+      </form>
       </div>
 
       <div class="secondContainer">
@@ -30,6 +32,8 @@
           <tbody id="tablebody"></tbody>
         </table>
       </div>
+      <div class="error"></div>
+      <div class="success"></div>
     </div>
   </body>
   <script src="script.js"></script>
